@@ -1,18 +1,12 @@
 import React, { useEffect, useState } from 'react'
-import { useHistory } from "react-router-dom"
 import { List, InputItem, Button } from 'antd-mobile';
+import { DatePicker } from 'antd';
 import '@css/login.less'
 
 export default (): JSX.Element => {
 	const [formValues, setFormValues] = useState({
 		name: '',
 	});
-	useEffect(() => {
-		// document.title = `登录 | ${window.title}`
-	}, [])
-	const onLogin = () => {
-		console.log('form=====>：', formValues);
-	}
 
 	const updateFormValues = (values: any) => {
     setFormValues((state) => {
@@ -28,7 +22,9 @@ export default (): JSX.Element => {
 			<div className="login_main">
 				<div className="login_form">
 					<h3>登录</h3>
-					{/* TODO:报错如图：vendor.dc84d456.js:27 ReferenceError: require is not defined */}
+					{/* TODO:触发的时候报错：ReferenceError: module is not defined */}
+					<DatePicker placeholder="请选择日期" />
+					{/* TODO:报错如图：vendor.dc84d456.js:27 ReferenceError: require is not defined(已解决，请看issue) */}
 					<List>
 						<InputItem
 							clear
@@ -40,7 +36,6 @@ export default (): JSX.Element => {
 							<span className="info">名字</span>
 						</InputItem>
 					</List>
-					<Button className="login_btn" type="primary" onClick={onLogin}>登录</Button>
 				</div>
 			</div>
 		</div>

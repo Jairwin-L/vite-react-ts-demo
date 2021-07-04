@@ -20,7 +20,12 @@ export default defineConfig({
 	],
 	server: {
 		host: 'dev.jairwin.cn',
-		port: 7083,
+		port: 6083,
+	},
+	build: {
+		commonjsOptions: {
+			transformMixedEsModules: true
+		}
 	},
 	css: {
 		preprocessorOptions: {
