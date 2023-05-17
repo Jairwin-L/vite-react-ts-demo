@@ -2,7 +2,7 @@ import React from 'react';
 // import ReactDOM from 'react-dom';
 import './index.less';
 import Router from './router';
-import 'antd-mobile/dist/antd-mobile.less'
+// import 'antd-mobile/dist/antd-mobile.less'
 import 'antd/dist/antd.less';
 
 // react18

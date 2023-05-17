@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import { List } from 'antd-mobile';
 import { DatePicker } from 'antd';
-import '@css/login.less'
 
 export default (): JSX.Element => {
 	const [formValues, setFormValues] = useState({

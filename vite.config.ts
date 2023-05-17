@@ -9,7 +9,6 @@ import path = require("path");
 const resolvePath = (dir) => path.join(__dirname, dir);
 
 export default defineConfig({
-	base: '/chatgpt',
   plugins: [
     viteCompression(),
     react(),
@@ -41,7 +40,6 @@ export default defineConfig({
   esbuild: {},
   optimizeDeps: {},
   server: {
-    host: "dev.jairwin.cn",
     port: 7088,
   },
   css: {
