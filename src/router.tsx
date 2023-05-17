@@ -1,12 +1,12 @@
 import React from 'react'
-import { BrowserRouter, Route, Switch } from 'react-router-dom'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Demo from './pages/demo'
 
 const Router = () => (
 	<BrowserRouter>
-		<Switch>
-			<Route path="/" exact component={Demo} />
-		</Switch>
+		<Routes>
+       <Route index path="/" element={<Demo />} />
+		</Routes>
 	</BrowserRouter>
 )
 export default Router
