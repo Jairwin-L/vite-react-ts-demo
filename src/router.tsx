@@ -1,11 +1,11 @@
 import React from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import Demo from './pages/demo'
+import Main from './pages/main'
 
 const Router = () => (
 	<BrowserRouter>
 		<Routes>
-       <Route index path="/" element={<Demo />} />
+       <Route index path="/" element={<Main />} />
 		</Routes>
 	</BrowserRouter>
 )
